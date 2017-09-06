@@ -11806,7 +11806,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11840,8 +11840,11 @@ div#notebook {
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Boston housing dataset has 489 data points with 4 variables each
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/muthudivya/anaconda3/lib/python3.6/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
+/home/muthudivya/anaconda3/lib/python3.6/site-packages/sklearn/learning_curve.py:23: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the functions are moved. This module will be removed in 0.20
+  DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -11849,11 +11852,8 @@ div#notebook {
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/muthudivya/anaconda3/lib/python3.6/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
-  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
-/home/muthudivya/anaconda3/lib/python3.6/site-packages/sklearn/learning_curve.py:23: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the functions are moved. This module will be removed in 0.20
-  DeprecationWarning)
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Boston housing dataset has 489 data points with 4 variables each
 </pre>
 </div>
 </div>
@@ -11892,24 +11892,24 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="c1"># TODO: Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Maximum price of the data</span>
 <span class="n">maximum_price</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Median price of the data</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Standard deviation of prices of the data</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -11938,7 +11938,7 @@ Minimum price: $105,000.00
 Maximum price: $1,024,800.00
 Mean price: $454,342.94
 Median price $438,900.00
-Standard deviation of prices: $165,340.28
+Standard deviation of prices: $165,171.13
 </pre>
 </div>
 </div>
@@ -11977,7 +11977,7 @@ Standard deviation of prices: $165,340.28
 <p><strong>Answer: As per my intuition:</strong></p>
 <ul>
 <li>RM - The value of 'MEDV' should increase with the increase in the number of rooms</li>
-<li>LSTAT - As is usually the case, lower class workers will not be able to afford expensive houses and hence MEDV will be higher as LSTAT value increases</li>
+<li>LSTAT - As is usually the case, lower class workers will not be able to afford expensive houses and hence a neighborhood with higher percent of lower class workers will have a relatively lower MEDV. Therefore, MEDV will increase with the decrease in LSTAT.</li>
 <li>PTRATIO - In my opinion a neighborhood with lesser students-to-teachers ratio will be a posh area than a neighborhood with higher ratio. Hence that directly implies that lesser PTRATIO means higher MEDV.</li>
 </ul>
 
@@ -13882,7 +13882,7 @@ E0Gq7qMnxAAAAABJRU5ErkJggg==
 <p><strong>Answer: </strong></p>
 <ul>
 <li>Grid Search Technique helps us choose the best model among various possibilities (combinations of different values of parameters) of different algorithms.</li>
-<li>In grid search, we take parameters as columns (with each value as one column) and hyperparameters as rows (each different value as one row). We train our algorithm with these combination on our training data and calculate the F1 score (or any score that we will be using to evaluate our model) on the validation set. We then pick the model with highest score and evaluate it against our testing set.</li>
+<li>In grid search, we evaluate all hyperparameters combination by taking their cartesian products and we train our algorithm on these combination on our training data and calculate the F1 score (or any score that we will be using to evaluate our model) on the validation set. We then pick the model with highest score and evaluate it against our testing set.</li>
 </ul>
 
 </div>
@@ -13913,7 +13913,8 @@ E0Gq7qMnxAAAAABJRU5ErkJggg==
 <p><strong>Answer: </strong></p>
 <ul>
 <li>k-fold cross validation technique is a technique where the training data set is split into 'k' folds - for eg. if we have 10000 data points from training set and we are going to perform 5-fold cv, then each of our fold will have 2000 data points. Next, the model is trained on (k-1) folds and 1 fold is used for validation. This is repeated until all individual folds are used as validation folds with remaining k-1 fold as the training set and score is calculated  as the average of all iteration's score.</li>
-<li>Benefit of k-fold - algorithm is trained k times with different combinations instead of just once (with the same number of training data points). Implementing k-fold in grid search will overcome the constrain of using just one subset for validation and give us the average of all k iterations -which only makes the algorithm learn about the data points better.</li>
+<li>Benefit of k-fold:
+  During grid-search, using the same training/validation set for various combinations of hyperparameters might lead to the model learning the data-points (ie. possibility of overfitting) and hence we could get misleading results. This issue is mitigated with the use of k-fold, as the training/validation sets are not the same set always and hence better results.</li>
 </ul>
 
 </div>
@@ -14154,9 +14155,28 @@ Predicted selling price for Client 3&#39;s home: $892,850.00
 <p><strong>Answer: </strong>
 Yes, the predicted selling price for the clients seems reasonable:</p>
 <ul>
-<li>House selling price is based on the number of rooms (more the number, more the price), poverty level(higher levels of poverty, lesser the housing price) and finally the quality of public schools on the basis of students to teachers ratio(lesser the ratio - better school and hence higher price of houses).</li>
-<li>Hence if we look at our model's prediction, it has rightly predicted the largest price for the largest house with less poverty level and the better school among other two, and least price for a house in the neighborhood of higher poverty level, very less no of rooms and higher PTRATIO.</li>
+<li><p>Would like to recall the statistics for our dataset:</p>
+<ul>
+<li>Minimum price: 105000.00</li>
+<li>Maximum price: 1,024,800.00</li>
+<li>Mean price: 454,342.94</li>
+<li>Median price: 438,900.00</li>
+<li>Standard deviation of prices: 165,171.13</li>
 </ul>
+</li>
+<li><p>Also, studying the individual features we can derive that:</p>
+<ul>
+<li>No of rooms - Selling price expected to <em>increase</em> with increase in no of rooms</li>
+<li>Poverty Level - Selling price expected to <em>decrease</em> with increase in poverty level</li>
+<li>PTRATIO - Selling price expected to <em>increase</em> with decrease in PTRATIO</li>
+</ul>
+</li>
+</ul>
+<p>Keeping in mind the above two sets of information, lets evaluate pricing for each client:</p>
+
+<pre><code>* Client 1: 5 rooms, 15% poverty level and 15-to-1 PTRATIO, the model has predicted 418,913.79 - very little below the median price, less than 2 std deviations above the minimum. Noting that dataset has only data for begining with 3 no of rooms, prediction seems reasonable.
+* Client 2: 4 rooms, 32% poverty level and 22-to-1 PTRATIO - all three features leading to a prediction of a very lesser pricing. And concurrently model has predicted 230,781.25 - less than one std dev above the minimum.
+* Similarly, model has predicted highest selling price for client 3 with 8 rooms (huge house!), only 3% poverty level (meaning posh neighborhood) and among best public schools - inclined towards the maximum pricing (highest pricing available for house with 9 rooms, and prediction here is for 8 rooms and hence a lil lesser than the maxixum)</code></pre>
 
 </div>
 </div>
